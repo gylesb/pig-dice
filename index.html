@@ -32,12 +32,18 @@
     <button type="button" name="btn" class="btn btn-primary btn-block" id="vsUser">Play against another person</button>
     <button type="button" name="btn" class="btn btn-primary btn-block" id="vsComputer">Play the computer</button>
     <br>
+    <div id="winnerBox">
+      <br>
+      <h2>Congratulations!</h2>
+      <h1 id="winner"></h1>
+      <br>
+      <br>
+    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="playerOneScoreBox">
-          <div id="highlight1">
-            <h3>Player 1:</h3>
-            <h2></h2>
+          <div>
+            <h3><span id="highlight1">>></span> Player 1:</h3>
           </div>
           <br>
           <div id="scoreOne">
@@ -50,9 +56,8 @@
       </div>
       <div class="col-md-6">
         <div class="playerTwoScoreBox">
-          <div id="highlight2">
-            <h3>Player 2:</h3>
-            <h2></h2>
+          <div>
+            <h3><span id="highlight2">>></span> Player 2:</h3>
           </div>
           <br>
           <div id="scoreTwo">
@@ -67,7 +72,7 @@
     <br>
     <div class="row">
       <div class="col-md-6">
-        <div class="diceBox">
+        <div id="diceBox">
           <h2>Dice:</h2>
           <br>
           <div id="dice">
@@ -76,21 +81,16 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div class="scoreBox">
+        <div id="scoreBox">
           <div id="Current score">
             <h2>Here is your current score:</h2>
             <br>
-            <div class="currentBox">
+            <div id="currentBox">
               <h1 id="currentScore"></h1>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="winnerBox">
-      <h1>Congratulations!</h1>
-      <h1 id="winner"></h1>
     </div>
   </div>
 </body>
