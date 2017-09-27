@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <meta charset="utf-8">
+  <title>Pig Dice</title>
+</head>
+<style media="screen">
+  body {
+    background-color: #97BE83;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Let's Play some Pig Dice!</h1>
+    </div>
+    <div class="well">
+      <h2>Rules to get you started so you aren't completely lost:</h2>
+      <ul>
+        <li>Choose to play either against another user or the computer (we'd recommend the user)</li>
+        <li>Click on the corresponding "Roll Dice!" button to roll the virutal die</li>
+        <li>When you roll the dice, a number from 1-6 is displayed which represents what score will be added to the player</li>
+        <li>When a player rolls a "1", then their points are lost for that turn and the turn passes to the other player</li>
+        <li>A player can choose to either roll again and take a chance or hold onto their accumalated points for the turn and have it added to their total score</li>
+        <li>First player to 100 wins!</li>
+      </ul>
+    </div>
+    <button type="button" name="btn" class="btn btn-primary btn-block" id="vsUser">Play against another person</button>
+    <button type="button" name="btn" class="btn btn-primary btn-block" id="vsComputer">Play the computer</button>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="playerOneScoreBox">
+          <div id="highlight1">
+            <h3>Player 1:</h3>
+            <h2></h2>
+          </div>
+          <br>
+          <div id="scoreOne">
+            <h1 id="p1Score"></h1>
+          </div>
+          <br>
+          <button type="button" name="btn" class="btn btn-warning" id="playerOneRoll">Roll Dice!</button>
+          <button type="button" name="btn" class="btn btn-danger" id="playerOnePass">Pass Turn!</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="playerTwoScoreBox">
+          <div id="highlight2">
+            <h3>Player 2:</h3>
+            <h2></h2>
+          </div>
+          <br>
+          <div id="scoreTwo">
+            <h1 id="p2Score"></h1>
+          </div>
+          <br>
+          <button type="button" name="btn" class="btn btn-warning" id="playerTwoRoll">Roll Dice!</button>
+          <button type="button" name="btn" class="btn btn-danger" id="playerTwoPass">Pass Turn!</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="diceBox">
+          <h2>Dice:</h2>
+          <br>
+          <div id="dice">
+            <h1 id="diceRoll"></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="scoreBox">
+          <div id="Current score">
+            <h2>Here is your current score:</h2>
+            <br>
+            <div class="currentBox">
+              <h1 id="currentScore"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="winnerBox">
+      <h1>Congratulations!</h1>
+      <h1 id="winner"></h1>
+    </div>
+  </div>
+</body>
+</html>
