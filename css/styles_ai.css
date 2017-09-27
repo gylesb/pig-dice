@@ -1,0 +1,109 @@
+.playerOneScoreBox {
+  text-align: center;
+  border: 2px solid green;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-top-left-radius: 30px;
+  background-color: #709B5B;
+}
+
+.playerTwoScoreBox {
+  text-align: center;
+  border: 2px solid green;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-top-right-radius: 30px;
+  background-color: #709B5B;
+}
+
+h3 #highlight1 {
+  color: #9AC9EC;
+}
+
+h3 #highlight2 {
+  color: #9AC9EC;
+  display: none;
+}
+
+#diceBox {
+  text-align: center;
+  border: 2px solid green;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 30px;
+  background-color: #709B5B;
+}
+
+#dice {
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 150px;
+  height: 150px;
+  margin-left: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#scoreBox {
+  text-align: center;
+  border: 2px solid green;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 30px;
+  background-color: #709B5B;
+}
+
+#currentBox {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-left: 105px;
+  background-color: #709B5B;
+}
+
+#scoreOne {
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-left: 155px;
+}
+
+#scoreTwo {
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-left: 155px;
+}
+
+.winnerBox {
+  border: 2px solid green;
+  border-radius: 30px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: #709B5B;
+}
+
+#winnerBox {
+  display: none;
+  text-align: center;
+}
+
+.jumbotron {
+  border: 2px solid black;
+}

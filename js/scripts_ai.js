@@ -8,14 +8,25 @@ var diceRoll = function() {
   return genValue;
 }
 
+
 $(document).ready(function() {
   // event.preventDefault();
   var player1 = new player(0);
-  var player2 = new player(0);
+  var computer = new player(0);
   var currentTotalScore = 0;
   var counter = 1;
 
-  // if (player1.playerScore <= 100 || player2.playerScore <=100) {
+  var bot = function(diceNumber, currentTotalScore) {
+    alert("hello bot here");
+    // for (var i = 0; i<=15; i+=diceNumber) {
+      if (currentTotalScore < 15) {
+        $("#computerRoll").trigger("click");
+      } else if (currentTotalScore >= 15) {
+        $("#computerPass").trigger("click");
+      }
+    }
+  }
+  if (player1.playerScore <= 100 || computer.playerScore <=100) {
     var currentTotalScore = 0;
     // Player 1 clicks "roll"
     $("#playerOneRoll").click(function() {
@@ -33,6 +44,7 @@ $(document).ready(function() {
           counter ++;
           $("#highlight1").hide();
           $("#highlight2").show();
+          bot();
         } else if (diceNumber != 1) {
           // add diceNumber to Curent Total Count
           currentTotalScore = currentTotalScore + diceNumber;
@@ -40,9 +52,14 @@ $(document).ready(function() {
         }
       }
     });
-      // Player 2 clicks "roll"
-    $("#playerTwoRoll").click(function() {
+
+      // Computer clicks "roll"
+    var computerTurn = function() {
+
+    }
+    $("#computerRoll").click(function() {
       var diceNumber = diceRoll();
+      alert(diceNumber);
       // var currentTotalScore = 0;
       if (counter % 2 == 0) {
         // player 2 lights up
@@ -60,6 +77,7 @@ $(document).ready(function() {
         // add diceNumber to Curent Total Count
           currentTotalScore = currentTotalScore + diceNumber;
           $("#currentScore").text(currentTotalScore);
+          bot();
         }
       }
     });
@@ -71,6 +89,8 @@ $(document).ready(function() {
         currentTotalScore = 0;
         $("#p1Score").text(player1.playerScore);
         counter ++;
+        alert("hello");
+        bot();
       }
       if (player1.playerScore >= 100) {
       // hide dice box and score box to display "player 1 wins!"
@@ -83,21 +103,21 @@ $(document).ready(function() {
     });
 
 
-    $("#playerTwoPass").click(function() {
+    $("#computerPass").click(function() {
       if (counter % 2 ==0) {
-        player2.playerScore = player2.playerScore + currentTotalScore;
+        computer.playerScore = computer.playerScore + currentTotalScore;
         // append player1.playerScore to player1 Score board;
         currentTotalScore = 0;
-        $("#p2Score").text(player2.playerScore);
+        $("#p2Score").text(computer.playerScore);
         counter ++;
       }
-      if (player2.playerScore >= 100) {
+      if (computer.playerScore >= 100) {
       // hide dice box and score box to display "player 1 wins!"
         $("#scoreBox").hide();
         $("#currentBox").hide();
         $("#scoreBox").hide();
         $("#winnerBox").show();
-        $("#winnerBox h1").text("Player 2 Wins!");
+        $("#winnerBox h1").text("The Computer Wins. Lol.");
       }
     });
 });

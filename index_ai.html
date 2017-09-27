@@ -2,11 +2,11 @@
 <html>
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/styles_ai.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts_ai.js"></script>
   <meta charset="utf-8">
-  <title>Pig Dice</title>
+  <title>Pig Dice vs ai</title>
 </head>
 <style media="screen">
   body {
@@ -29,7 +29,7 @@
         <li>First player to 100 wins!</li>
       </ul>
     </div>
-    <button type="button" name="btn" onclick="location.href='index.html'"class="btn btn-primary btn-block" id="vsUser">Play against another person</button>
+    <button type="button" name="btn" onclick="location.href='index.html'" class="btn btn-primary btn-block" id="vsUser">Play against another person</button>
     <button type="button" name="btn" onclick="location.href='index_ai.html'" class="btn btn-primary btn-block" id="vsComputer">Play the computer</button>
     <br>
     <div id="winnerBox">
@@ -57,15 +57,15 @@
       <div class="col-md-6">
         <div class="playerTwoScoreBox">
           <div>
-            <h3><span id="highlight2">>></span> Player 2:</h3>
+            <h3><span id="highlight2">>></span> Computer:</h3>
           </div>
           <br>
           <div id="scoreTwo">
             <h1 id="p2Score"></h1>
           </div>
           <br>
-          <button type="button" name="btn" class="btn btn-warning" id="playerTwoRoll">Roll Dice!</button>
-          <button type="button" name="btn" class="btn btn-danger" id="playerTwoPass">Pass Turn!</button>
+          <button type="button" name="btn" class="btn btn-warning" id="computerRoll">Roll Dice!</button>
+          <button type="button" name="btn" class="btn btn-danger" id="computerPass">Pass Turn!</button>
         </div>
       </div>
     </div>
