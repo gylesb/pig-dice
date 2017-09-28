@@ -33,6 +33,8 @@ $(document).ready(function() {
           counter ++;
           $("#highlight1").hide();
           $("#highlight2").show();
+          $("#diceRoll").text("");
+          $("#currentScore").text("");
         } else if (diceNumber != 1) {
           // add diceNumber to Curent Total Count
           currentTotalScore = currentTotalScore + diceNumber;
@@ -56,6 +58,8 @@ $(document).ready(function() {
           counter ++;
           $("#highlight1").show();
           $("#highlight2").hide();
+          // $("#diceRoll").text("");
+          // $("#currentScore").text("");
         } else if (diceNumber !=1) {
         // add diceNumber to Curent Total Count
           currentTotalScore = currentTotalScore + diceNumber;
@@ -71,6 +75,10 @@ $(document).ready(function() {
         currentTotalScore = 0;
         $("#p1Score").text(player1.playerScore);
         counter ++;
+        $("#highlight1").hide();
+        $("#highlight2").show();
+        // $("#diceRoll").text("");
+        // $("#currentScore").text("");
       }
       if (player1.playerScore >= 100) {
       // hide dice box and score box to display "player 1 wins!"
@@ -90,6 +98,10 @@ $(document).ready(function() {
         currentTotalScore = 0;
         $("#p2Score").text(player2.playerScore);
         counter ++;
+        $("#highlight1").show();
+        $("#highlight2").hide();
+        $("#diceRoll").text("");
+        $("#currentScore").text("");
       }
       if (player2.playerScore >= 100) {
       // hide dice box and score box to display "player 1 wins!"
